@@ -3,7 +3,6 @@ Feature: Verify the home page Data
   Background:
     * url baseUrlCme
     * def country = country
-    * header Accept = 'application/json'
 
   @topSearches
   Scenario: Get Top Searches

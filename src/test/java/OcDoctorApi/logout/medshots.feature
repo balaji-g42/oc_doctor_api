@@ -3,7 +3,6 @@ Feature: Verify the Medshots landing Page
   Background:
     * url baseUrlMed
     * def country = country
-    * header Accept = 'application/json'
 
   @dailyUpdates
   Scenario: Medshots Daily updates Section

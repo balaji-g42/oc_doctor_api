@@ -2,7 +2,7 @@ package OcDoctorApi.logout;
 
 import com.intuit.karate.junit5.Karate;
 
-public class ZLogoutRunner {
+public class testLogoutRunner {
     @Karate.Test
     Karate testProd() {
         return Karate.run().karateEnv("prod").relativeTo(getClass());

@@ -3,7 +3,6 @@ Feature: Verify the CME/CPD Page all Apis
   Background:
     * url baseUrlCme
     * def country = country
-    * header Accept = 'application/json'
 
   @recommendedCme @positive
   Scenario: Get Recommended CME/CPD list

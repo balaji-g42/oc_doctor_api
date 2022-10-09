@@ -3,7 +3,6 @@ Feature: Verify the Conference page Data
   Background:
     * url baseUrlCme
     * def country = country
-    * header Accept = 'application/json'
 
   @conferences @positive
   Scenario: Get Conferences list

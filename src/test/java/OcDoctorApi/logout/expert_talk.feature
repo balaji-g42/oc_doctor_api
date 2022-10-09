@@ -3,7 +3,6 @@ Feature: Verify the Expert Talk landing Page
   Background:
     * url baseUrlCme
     * def country = country
-    * header Accept = 'application/json'
 
   @expertTalkLandingPage
   Scenario: Expert talk landing page data

@@ -8,7 +8,8 @@ function fn() {
             env:env,
             baseUrlCme : 'https://stgapi.omnicuris.com',
             baseUrlMed : 'https://stg-medshots-api.omnicuris.com',
-            country : 'IN'
+            country : 'IN',
+            mobile : '6565055127'
         };
     if(env == 'prod') {
         config.baseUrlCme = 'https://api.omnicuris.com';
@@ -18,6 +19,7 @@ function fn() {
         config.baseUrlMed = 'https://preprod-medshots-api.omnicuris.com';
     }
     var result = karate.callSingle('classpath:OcDoctorApi/common/common.feature@country',config);
+    karate.configure('headers', { Accept: 'application/json' });
     config.country = result.country;
     return config;
 }

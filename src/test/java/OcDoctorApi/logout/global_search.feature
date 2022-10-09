@@ -3,7 +3,6 @@ Feature: Verify the Global search All Apis
   Background:
     * url baseUrlCme
     * def country = country
-    * header Accept = 'application/json'
 
   @trendingSearch
   Scenario: Get Top Searches
