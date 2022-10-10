@@ -15,6 +15,6 @@ public class testLogoutRunner {
 
     @Karate.Test
     Karate testWithoutEnv(){
-        return Karate.run("logout").relativeTo(getClass());
+        return Karate.run().relativeTo(getClass());
     }
 }

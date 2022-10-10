@@ -10,7 +10,9 @@ Feature: Verify the login Api should trigger otp
       When request {"mobileNumber":"#(mobile)","countrySortName":"#(country)"}
       * method POST
       Then status 200
-      * if (response.newUser == false) karate.call('login.feature@verifyOtp')
+      * if (response.newUser == false) karate.call(true, 'classpath:OcDoctorApi/authentication/login.feature@verifyOtp')
+      * def accessToken =  response.users.accessToken
+      * print accessToken
       
       @verifyOtp @ignore
       Scenario: With Correct Otp User Should login
@@ -18,4 +20,4 @@ Feature: Verify the login Api should trigger otp
         When request {"mobileNumber":"#(mobile)","otp":"111111"}
         * method POST
         Then status 200
-        * print response.users.accessToken
+#        * print accessToken

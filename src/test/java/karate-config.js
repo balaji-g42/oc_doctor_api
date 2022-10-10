@@ -19,7 +19,7 @@ function fn() {
         config.baseUrlMed = 'https://preprod-medshots-api.omnicuris.com';
     }
     var result = karate.callSingle('classpath:OcDoctorApi/common/common.feature@country',config);
-    karate.configure('headers', { Accept: 'application/json' });
     config.country = result.country;
+    karate.configure('headers', { Accept: 'application/json' });
     return config;
 }

@@ -1,8 +1,8 @@
-package OcDoctorApi.authentication;
+package OcDoctorApi.login;
 
 import com.intuit.karate.junit5.Karate;
 
-public class testAuthenticationRunner {
+public class testLoginRunner {
     @Karate.Test
     Karate testProd() {
         return Karate.run().karateEnv("prod").relativeTo(getClass());
